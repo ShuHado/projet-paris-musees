@@ -1,14 +1,16 @@
-/*
-  Warnings:
+-- CreateTable
+CREATE TABLE `Painters` (
+    `id` INTEGER NOT NULL AUTO_INCREMENT,
+    `name` VARCHAR(191) NOT NULL,
+    `birthDate` VARCHAR(191) NULL,
+    `deathDate` VARCHAR(191) NULL,
+    `picture` VARCHAR(191) NULL,
+    `picture_credit` VARCHAR(191) NULL,
+    `wikipedia_link` VARCHAR(191) NULL,
 
-  - You are about to drop the `painting` table. If the table is not empty, all the data it contains will be lost.
-
-*/
--- DropForeignKey
-ALTER TABLE `painting` DROP FOREIGN KEY `Painting_painterId_fkey`;
-
--- DropTable
-DROP TABLE `painting`;
+    UNIQUE INDEX `Painters_name_key`(`name`),
+    PRIMARY KEY (`id`)
+) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
 -- CreateTable
 CREATE TABLE `Paintings` (
