@@ -1,5 +1,7 @@
 <script setup>
 import { getRandomPainters, getRandomPainting } from "@/services/painters";
+
+const baseUrl = `${import.meta.env.VITE_API_BASE_URL}/v1/painters/`;
 </script>
 
 <template>
@@ -8,7 +10,7 @@ import { getRandomPainters, getRandomPainting } from "@/services/painters";
 	>
 		<div class="d-flex flex-column align-items-center">
 			<h1>Quizz ({{ count }}/10)</h1>
-			<h2>Qui a peint cette œuvre ?</h2>
+			<h2>Qui a peint cette œuvre ? {{ baseUrl }}</h2>
 		</div>
 		<div>
 			<img class="img-fluid" :src="painting.image" alt="" />
