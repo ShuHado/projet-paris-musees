@@ -1,9 +1,6 @@
 import axios from "axios";
 
-// const baseUrl = `${import.meta.env.VITE_API_BASE_URL}/v1/painters/`;
-
-const baseUrl =
-	"https://projet-paris-musees-production.up.railway.app/v1/painters/";
+const baseUrl = `${import.meta.env.VITE_API_BASE_URL}/v1/painters/`;
 
 export async function getRandomPainters() {
 	const response = await axios.get(`${baseUrl}random`);
